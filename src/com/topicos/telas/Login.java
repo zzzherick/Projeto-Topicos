@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import static java.lang.System.exit;
 
@@ -83,6 +84,13 @@ public class Login extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
 
+            try {
+                new Principal();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+
+            dispose();
             char[] chars = senha.getPassword();
             String senha = String.valueOf(chars);
 /*
