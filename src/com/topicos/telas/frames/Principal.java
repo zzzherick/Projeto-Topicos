@@ -1,19 +1,8 @@
-package com.topicos.telas;
+package com.topicos.telas.frames;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.RootPaneContainer;
-import javax.swing.border.EmptyBorder;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Frame;
-import java.awt.GridLayout;
 import javax.swing.JLabel;
-import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -24,8 +13,6 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class Principal extends JFrame {
