@@ -16,6 +16,7 @@ import java.io.IOException;
 import static java.lang.System.exit;
 
 
+
 public class Login extends JFrame {
     private JTextField login;
     private JPasswordField senha;
@@ -40,9 +41,9 @@ public class Login extends JFrame {
         //Poe Fonte
         Font fonte = new Font("serif", Font.BOLD | Font.ITALIC, 20);
         //icones
-        ImageIcon iconeSenha = new ImageIcon(getClass().getResource("icones/senha.png"));
+        ImageIcon iconeSenha = new ImageIcon("src/com/topicos/telas/icones/senha.png");
 
-        ImageIcon iconeLogin = new ImageIcon(getClass().getResource("icones/login_photo.png"));
+        ImageIcon iconeLogin = new ImageIcon("src/com/topicos/telas/icones/login_photo.png");
 
         //Da forma aos botoes
         JLabel log = new JLabel("Login: ");
