@@ -13,43 +13,53 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.Toolkit;
-import java.io.IOException;
+
+import com.topicos.listenners.PrincipalListenner;
 
 public class Principal extends JFrame {
 
     private JPanel contentPane;
 
+    private JMenuBar menuBar = new JMenuBar();
+
+    private JMenu ArquivoMenu = new JMenu("Arquivo");
+
+    private JMenuItem SairArquivoItem = new JMenuItem("Sair");
+
+    private JMenu AdminMenu = new JMenu("Admin");
+
+    private JMenuItem AdicionarUsuarioItem = new JMenuItem("Adicionar Usuario");
+
+    private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
+
+    private JMenu AjudaMenu = new JMenu("Ajuda");
+
+    private JMenuItem SobreItem = new JMenuItem("Sobre");
+
     /**
      * Create the frame.
      */
-    public Principal() throws IOException {
+    public Principal() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/com/topicos/telas/background/sport_club_corinthians_paulista___background_by_lucasamarilla-d5v4zet.jpg")));
         setTitle("Topicos Especiais - I");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 811, 562);
 
-        JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-        JMenu ArquivoMenu = new JMenu("Arquivo");
         menuBar.add(ArquivoMenu);
 
-        JMenuItem SairArquivoItem = new JMenuItem("Sair");
         ArquivoMenu.add(SairArquivoItem);
 
-        JMenu AdminMenu = new JMenu("Admin");
         menuBar.add(AdminMenu);
 
-        JMenuItem AdicionarUsuarioItem = new JMenuItem("Adicionar Usuario");
         AdminMenu.add(AdicionarUsuarioItem);
 
-        JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
         AdminMenu.add(RemoverUsuarioItem);
 
-        JMenu AjudaMenu = new JMenu("Ajuda");
         menuBar.add(AjudaMenu);
+        SobreItem.addActionListener(new PrincipalListenner());
 
-        JMenuItem SobreItem = new JMenuItem("Sobre");
         AjudaMenu.add(SobreItem);
         contentPane = new JPanel();
         contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -108,10 +118,6 @@ public class Principal extends JFrame {
         setResizable(false);
         setVisible(true);
 
-        /*TESTES DE LISTENNER*/
-        /*CRIAR OUTRA CLASSE DEPOIS*/
-        btnExit.addActionListener(e -> {
-            dispose();
-        });
+
     }
 }

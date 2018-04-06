@@ -85,11 +85,8 @@ public class Login extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            try {
                 new Principal();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
+
 
             dispose();
             char[] chars = senha.getPassword();
