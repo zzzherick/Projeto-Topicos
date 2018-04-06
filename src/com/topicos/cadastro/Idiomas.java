@@ -4,8 +4,8 @@ public class Idiomas {
 
     private String nomeIdioma;
     private double preco;
-    private int duracao;
-    private int horario;
+    private int duracaoMes;
+    private int duracaoHora;
 
     public void setNomeIdioma(String nomeIdioma){
         this.nomeIdioma = nomeIdioma;
@@ -23,20 +23,20 @@ public class Idiomas {
         return preco;
     }
 
-    public void setDuracao(int duracao){
-        this.duracao = duracao;
+    public void setDuracaoMes(int duracaoMes){
+        this.duracaoMes = duracaoMes;
     }
 
-    public int getDuracao(){
-        return duracao;
+    public int getDuracaoMes(){
+        return duracaoMes;
     }
 
-    public void setHorario(int horario){
-        this.horario = horario;
+    public void setDuracaoHora(int duracaoHora){
+        this.duracaoHora = duracaoHora;
     }
 
-    public int getHorario(){
-        return horario;
+    public int getDuracaoHora(){
+        return duracaoHora;
     }
 
 }
